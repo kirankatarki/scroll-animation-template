@@ -5,12 +5,11 @@ let leftDiv = document.querySelector('.two-sec')
 
 document.onscroll = function scroll() {
     let y = window.scrollY;
-    if(y < 100){
-        console.log('0 scroll');
+    if(y < 50){
         parent.className = 'top-section sticky normal-section'
         curDiv.className = 'one-sec show'    
         leftDiv.className = 'two-sec hide'
-    }else if(y > 300){
+    }else if(y > 100){
         parent.className = 'top-section non-sticky normal-section'
         curDiv.className = 'one-sec hide hide-animation'    
         leftDiv.className = 'two-sec show show-animation'
@@ -66,7 +65,7 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.15
+        threshold: 0.25
     }
 );
 
